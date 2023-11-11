@@ -209,6 +209,9 @@ if __name__ == "__main__":
     )
     imagens['flappybird'] = pygame.image.load(
         imagem_jogador).convert_alpha()
+    #mudar tamanho imagem
+    imagens['flappybird'] = pygame.transform.scale(imagens['flappybird'], (43,24))
+
     imagens['sea_level'] = pygame.image.load(
         imagem_mar).convert_alpha()
     imagens['background'] = pygame.image.load(

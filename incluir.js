@@ -2,8 +2,8 @@ $(function () {
 
     $(document).on("click", "#btIncluir", function () {
 
-        if (!$('#meuform').val()) {
-            e.preventDefault();
+        if (!$('#campoImagem').val()) {
+            //e.preventDefault();
             alert('Please Upload File');
         }
         
