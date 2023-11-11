@@ -17,7 +17,7 @@ function listagem_generica() {
                 // percorrer a lista de pessoas retornadas; 
                 for (var reg of retorno.detalhes) { //p vai valer cada pessoa do vetor de pessoas
                     // criar um parágrafo
-                    var paragrafo = $('<div class="resp-table-row">');
+                    var paragrafo = $('<tr>');
                     // informar o HTML deste parágrafo
                     // observe o apóstrofo inclinado, para interpretar as variáveis
                     //paragrafo.html(`==> ${p.nome}, ${p.email}`);
@@ -39,11 +39,11 @@ function listagem_generica() {
                             var valor = reg[partes[0]][partes[1]];
                             // o valor não está definido? Deu problema?
                             if (valor == undefined) {
-                                valor = '<div class="table-body-cell">';
+                                valor = '<td>';
                             }
-                            s = s + '<div class="table-body-cell">' + valor + '</div>';
+                            s = s + '<td>' + valor + '</td>';
                         } else {
-                            s = s + '<div class="table-body-cell">' + reg[campo] + '</div>';
+                            s = s + '<td>' + reg[campo] + '</td>';
                         }
                     }
                     paragrafo.html(`${s}`);
